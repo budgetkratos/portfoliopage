@@ -1,0 +1,410 @@
+@import 'config';  
+@import 'menu';  
+@import 'form';
+
+// GENERAL SETTINGS
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+body {
+    overflow: auto;
+    background: $primary-color;
+    margin: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: set-text-color($primary-color);
+    @include easeOut;
+    // DARK MODE SETTINGS
+
+    &.dark {
+        background-color: #212121;
+        color: #e0e0e0;
+
+        .icons a, .text-highlight, .nav-item, .logo{
+            color:#c62828 ;
+        }
+
+        .icons a:hover {
+            @include easeOut;
+            color: #e0e0e0;
+        }
+
+        .lg-heading, .text-secondary {
+            color: #e0e0e0;
+        }
+
+        .star-wrapper {
+            color: #c62828 ;
+
+            & p{
+                color: #e0e0e0;
+            }
+        }
+
+        .sticky {
+            background-color: #424242;
+        }
+
+        footer {
+            background-color: #212121;
+        }
+
+        .border {
+            border: 2px solid #c62828 ;
+        }
+
+        .contact {
+            color: #000;
+        }
+
+        .form button {
+            background-color: #c62828 ;
+            border: 2px solid #212121;
+        }
+    }
+}
+
+
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading {
+        font-size: 6rem; // default font size of html document is 16px.. we have 6 rem... that means font size is 16 * 6 = 96px;
+    }
+
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($secondary-color, 50), 0.5);
+    }
+}
+
+.text-highlight {
+    color: $secondary-color;
+    font-size: 6rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}   
+
+.border {
+    border: 2px solid $secondary-color;
+}
+
+#theme-button {
+    cursor: pointer;
+}
+
+// END GENERAL SETTINGS
+
+// MAIN section
+
+main {
+    padding: 25vh 4rem;
+    overflow: hidden;
+    height: 100vh;
+    
+    .icons {
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem; 
+            color: set-text-color($primary-color);
+            @include easeOut; 
+
+            &:hover {
+
+                color: $secondary-color;
+                //calling already created mixin for a transition
+            }
+        }
+    }
+    
+    header {
+        position: fixed; // burger menu always on top
+        z-index: 2; //always in front of everything
+        width: 100%; // it stretches across the whole screen
+    }
+
+    .star-wrapper {
+        display: flex;
+        height: 10vh;
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        transition: 1.7s ease-out;
+
+        &.hidden {
+            transform: translateX(-1400px);
+        }
+
+        &:hover .text-secondary{
+            transform: translateY(0%);
+        }
+
+        #star{
+            font-size: 6rem;
+            height: 100%;
+            width: 5%;
+            padding-left: 4rem;
+            cursor: pointer;
+            
+        }
+
+        .text-secondary {
+            font-size: 3rem;
+            width: 95%;
+            height: 100%;
+            margin-top: 0;
+            margin-left: 2rem;
+            padding-top: 1.5rem;
+            transform: translateY(100%);
+            color: $secondary-color;
+            @include easeOut;
+        }
+        
+    }
+
+}
+
+// END MAIN SECTION
+
+// WORK SECTION
+
+.work {
+    padding: 10vh 4rem;
+    margin-bottom: 20vh;
+
+    .text-secondary {
+        font-size: 3rem;
+    }
+
+    .wrapper-work {
+        display: grid;
+        grid-gap: 2rem;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+        grid-auto-flow: row;
+        grid-template-areas:
+        'project-1 project-2 project-3';
+
+        .project {
+            margin: 4rem auto;
+            width:100%;  
+            text-align: center;
+            height: 100%;
+            img, h2, p {
+                padding: 0.5rem 2rem;
+            }
+        }
+
+        .project-1 {
+            grid-area: project-1;
+            }
+        
+
+        .project-2 {
+            grid-area: project-2;
+        }
+
+        .project-3{
+            grid-area: project-3;
+        }
+
+        #project-img-1 {
+            background: url('https://budgetkratos.github.io/portfoliopage/img/project1.jpg');
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            @include easeOut;
+
+            &:hover {
+                transform: scale(1.05);
+
+                -webkit-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+
+                opacity: 0.2;
+                }
+        }
+
+        #project-img-2 {
+            background: url('https://budgetkratos.github.io/portfoliopage/img/project2.jpg');
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include easeOut;
+
+            &:hover {
+                transform: scale(1.05);
+                border: none;
+
+                -webkit-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+
+                opacity: 0.4;
+            }
+        }
+
+        #project-img-3 {
+            background: url('https://budgetkratos.github.io/portfoliopage/img/project3.jpg');
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include easeOut;
+
+            &:hover {
+                transform: scale(1.05);
+                border: none;
+
+                -webkit-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
+
+                opacity: 0.4;
+            }
+        }
+
+        .work-text-wrapper-1 {
+            text-align: center;
+            top: 0;
+            margin: auto;
+        }
+
+        .work-text-wrapper-2 {
+            text-align: center;
+            top: 0;
+            margin: auto;
+        }
+
+        .work-text-wrapper-3 {
+            text-align: center;
+            top: 0;
+            margin: auto;
+        }
+    }
+    
+
+}
+
+// END WORK SECTION
+
+// ABOUT SECTION
+
+.about {
+    padding: 10vh 4rem;
+
+    .text-secondary {
+        font-size: 3rem;
+        // margin-top: 1rem;
+    }
+
+    .bio {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .wrapper-about {
+        display: grid;
+        grid-gap: 2rem;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-template-areas: 
+        'bio bio bio'
+        'work work work'
+        'job-1 job-2 job-3';
+
+        .bio {
+            grid-area: bio;
+        }
+
+        .exp-heading {
+            grid-area: work;
+        }
+
+        .job {
+            margin: 2rem auto;
+            width:95%;
+            text-align: left;
+            padding: 1rem 2rem;
+            transition: 0.2s ease-out;
+
+            &:hover {
+                border: 6px solid $primary-color;
+
+                -webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+            }
+        }
+
+        .job-1 {
+            grid-area: job-1;
+        }
+
+        .job-2 {
+            grid-area: job-2;
+        }
+
+        .job-3 {
+            grid-area: job-3;
+        }
+
+        .text-highlight {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+    }
+    
+}
+
+// END ABOUT SECTION
+
+// START FOOTER SECTION
+
+footer {
+    height: 20vh;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 1.5rem;
+
+    .icons a, a  {
+        @include easeOut;
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+}
+@import 'mobile';  // included at the bottom because we want them to run after everything in the DOM has been loaded

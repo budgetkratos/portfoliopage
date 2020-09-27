@@ -1,0 +1,366 @@
+// include widescreens
+
+@include mediaXXLg {
+    header {
+
+        .logo {
+            font-size: 2.5rem;
+        }
+
+        ul a{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include mediaXLg {
+    header {
+        .logo {
+            font-size: 2rem;
+        }
+        
+        ul a{
+            font-size: 1rem;
+        }
+    }
+}
+
+
+// desktop, laptop
+
+@include mediaLg {
+    header {
+
+        width: 100%;
+        
+        .logo {
+            display: none;
+        }
+
+        ul {
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0;
+            font-size: 2rem;
+        }
+
+        &.sticky {
+            padding: 0 4rem;
+        }
+    }
+
+    // main 
+
+    main {
+        width: 100%;
+        text-align: center;
+
+        .star-wrapper {
+            display: none;
+        }
+    }
+
+    // work
+
+    .work {
+
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+        }
+
+        .wrapper-work {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'project-1'
+            'project-2'
+            'project-3';
+            grid-gap: 10rem;
+        }
+    }
+
+    // about
+
+    .about {
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+        }
+
+        .wrapper-about {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'bio'
+            'work'
+            'job-1'
+            'job-2'
+            'job-3';
+        }
+
+        .bio {
+            font-size: 1.5rem;
+        }
+    }
+
+    // contact
+
+    .contact{
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+
+}
+
+
+// tablets, small laptops
+
+@include mediaMd {
+    header {
+
+        width: 100%;
+        padding:0;
+
+        .logo {
+            display: none;
+        }
+
+        ul {
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0;
+        }
+
+        &.sticky {
+            padding: 0 4rem;
+        }
+    }
+
+    // main
+
+    main {
+        width: 100%;
+        text-align: center;
+
+        
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .star-wrapper {
+            display: none;
+        }
+
+    }
+
+    // work
+
+    .work {
+
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+        }
+
+        .wrapper-work {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'project-1'
+            'project-2'
+            'project-3';
+            grid-gap: 10rem;
+        }
+    }
+
+    .about {
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+        }
+
+        .wrapper-about {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'bio'
+            'work'
+            'job-1'
+            'job-2'
+            'job-3';
+        }
+
+        .bio {
+            font-size: 1.5rem;
+        }
+    }
+
+    .contact{
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+// phones
+
+@include mediaSm {
+    header {
+
+        width: 100%;
+        padding:0;
+
+        .logo {
+            display: none;
+        }
+
+        ul {
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 0;
+        }
+
+        &.sticky {
+            padding: 0 4rem;
+        }
+    }
+
+    // main
+
+    main {
+        width: 100%;
+        text-align: center;
+
+        
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .star-wrapper {
+            display: none;
+        }
+
+    }
+
+    // work
+
+    .work {
+
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+        }
+
+        .wrapper-work {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'project-1'
+            'project-2'
+            'project-3';
+            grid-gap: 10rem;
+        }
+    }
+
+    .about {
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+        }
+
+        .wrapper-about {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'bio'
+            'work'
+            'job-1'
+            'job-2'
+            'job-3';
+        }
+
+        .bio {
+            font-size: 1.5rem;
+        }
+    }
+
+    .contact{
+        .lg-heading {
+            font-size: 3rem;
+        }
+
+        .text-highlight {
+            font-size: 3rem;
+        }
+
+        .text-secondary {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
