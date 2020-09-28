@@ -17,10 +17,9 @@ html {
 
 body {
     overflow: auto;
-    background: $primary-color;
     margin: 0;
     height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Playfair Display SC', serif;
     line-height: 1.5;
     color: set-text-color($primary-color);
     @include easeOut;
@@ -43,16 +42,8 @@ body {
             color: #e0e0e0;
         }
 
-        .star-wrapper {
-            color: #c62828 ;
-
-            & p{
-                color: #e0e0e0;
-            }
-        }
-
         .sticky {
-            background-color: #424242;
+            background-color: lighten($secondary-color, 5);
         }
 
         footer {
@@ -85,9 +76,10 @@ h1, h2, h3 {
     }
 
     &.sm-heading {
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(lighten($secondary-color, 50), 0.5);
+        position: absolute;
+        right: 20%;
+        top: 70%;
+        font-weight: 600;
     }
 }
 
@@ -114,10 +106,22 @@ a {
 // MAIN section
 
 main {
-    padding: 25vh 4rem;
+    padding: 20vh 10rem;
+    margin: 8rem 10rem 2rem 10rem;
     overflow: hidden;
     height: 100vh;
+    background: url('https://budgetkratos.github.io/portfoliopage/img/bg-image.jpg');
+    background-size: cover;
+
+    -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
     
+    &.dark {
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('https://budgetkratos.github.io/portfoliopage/img/bg-image.jpg');
+        background-size: cover;
+    }
+
     .icons {
         margin-top: 1rem;
 
@@ -139,47 +143,6 @@ main {
         z-index: 2; //always in front of everything
         width: 100%; // it stretches across the whole screen
     }
-
-    .star-wrapper {
-        display: flex;
-        height: 10vh;
-        position: fixed;
-        bottom: 10px;
-        left: 0;
-        width: 100%;
-        transition: 1.7s ease-out;
-
-        &.hidden {
-            transform: translateX(-1400px);
-        }
-
-        &:hover .text-secondary{
-            transform: translateY(0%);
-        }
-
-        #star{
-            font-size: 6rem;
-            height: 100%;
-            width: 5%;
-            padding-left: 4rem;
-            cursor: pointer;
-            
-        }
-
-        .text-secondary {
-            font-size: 3rem;
-            width: 95%;
-            height: 100%;
-            margin-top: 0;
-            margin-left: 2rem;
-            padding-top: 1.5rem;
-            transform: translateY(100%);
-            color: $secondary-color;
-            @include easeOut;
-        }
-        
-    }
-
 }
 
 // END MAIN SECTION
@@ -187,8 +150,21 @@ main {
 // WORK SECTION
 
 .work {
-    padding: 10vh 4rem;
-    margin-bottom: 20vh;
+    padding: 20vh 10rem;
+    margin: 4rem 10rem 2rem 10rem;
+    overflow: hidden;
+    height: 100vh;
+    background: url('https://budgetkratos.github.io/portfoliopage/img/bg-image-2.jpg');
+    background-size: cover;
+
+
+    -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+
+    &.dark {
+        background: linear-gradient( to top right,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('https://budgetkratos.github.io/portfoliopage/img/bg-image-2.jpg');
+    }
 
     .text-secondary {
         font-size: 3rem;
@@ -212,6 +188,10 @@ main {
             img, h2, p {
                 padding: 0.5rem 2rem;
             }
+
+            img {
+                opacity: 0.2;
+            }
         }
 
         .project-1 {
@@ -234,6 +214,12 @@ main {
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
+            opacity: 0.7;
+
+            -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+            box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+            
 
             @include easeOut;
 
@@ -244,7 +230,7 @@ main {
                 -moz-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
                 box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
 
-                opacity: 0.2;
+                opacity: 1;
                 }
         }
 
@@ -255,6 +241,11 @@ main {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            opacity: 0.7;
+
+            -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+            box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
 
             @include easeOut;
 
@@ -266,7 +257,7 @@ main {
                 -moz-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
                 box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
 
-                opacity: 0.4;
+                opacity: 1;
             }
         }
 
@@ -277,6 +268,11 @@ main {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            opacity: 0.7;
+
+            -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+            box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
 
             @include easeOut;
 
@@ -288,7 +284,7 @@ main {
                 -moz-box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
                 box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.75);
 
-                opacity: 0.4;
+                opacity: 1;
             }
         }
 
@@ -319,7 +315,21 @@ main {
 // ABOUT SECTION
 
 .about {
-    padding: 10vh 4rem;
+    padding: 20vh 10rem;
+    margin: 4rem 10rem 0rem 10rem;
+    overflow: hidden;
+
+    background: linear-gradient(to bottom right, #CED1D6, #FFFCF7);
+
+
+    -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+
+    &.dark {
+        background: linear-gradient( to top right,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) ), url('https://budgetkratos.github.io/portfoliopage/img/bg-image-3.jpg');
+        background-size: cover;
+    }
 
     .text-secondary {
         font-size: 3rem;
@@ -380,6 +390,7 @@ main {
         .text-highlight {
             font-size: 1.5rem;
             font-weight: bold;
+            text-decoration: underline;
         }
 
     }
@@ -397,6 +408,8 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 2rem;
+
 
     font-size: 1.5rem;
 
@@ -407,4 +420,9 @@ footer {
         }
     }
 }
+
+
+// rain
+
+
 @import 'mobile';  // included at the bottom because we want them to run after everything in the DOM has been loaded

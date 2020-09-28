@@ -6,14 +6,12 @@ document.addEventListener('scroll', function () {
     header.classList.toggle('sticky', window.scrollY > 0);
 })
 
-// REMOVE FOOTNOTE ON SCROLL
-
-
-document.addEventListener('scroll', function () {
-    const starWrapper = document.querySelector('.star-wrapper');
-    starWrapper.classList.toggle('hidden', window.scrollY > 0);
-})
-
+var onresize = function () {
+    var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+    console.log(width);
+}
 
 // FORM 
 
@@ -117,21 +115,16 @@ const themeButton = document.querySelector('#theme-button');
 
 themeButton.addEventListener('click', function () {
     const body = document.querySelector('BODY');
+    const mainDoc = document.querySelector('.main');
+    const workDoc = document.querySelector('.work');
+    const aboutDoc = document.querySelector('.about');
+    const contactDoc = document.querySelector('.contact');
+
+
     body.classList.toggle('dark');
+    mainDoc.classList.toggle('dark');
+    workDoc.classList.toggle('dark');
+    aboutDoc.classList.toggle('dark');
+    contactDoc.classList.toggle('dark');
 })
 
-
-
-
-// setTimeout(() => document.querySelector('.alert').remove(), 3000); // function set time out takes in 2 parameters .. we selected any element with ALERT class and gave it 3000 miliseconds to be removed
-
-// }
-
-
-// // clear fields --------------------------------------------------------------------------------------------------------------------------------
-
-// static clearFields() { // clears the input - sets the value to empty string 
-//     document.querySelector('#title').value = '';
-//     document.querySelector('#author').value = '';
-//     document.querySelector('#isbn').value = '';
-// }

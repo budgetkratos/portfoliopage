@@ -1,11 +1,25 @@
 .contact{
-    padding: 10vh 4rem;
+    padding: 20vh 10rem;
+    margin: 4rem 10rem 0rem 10rem;
+    overflow: hidden;
+
+    background: linear-gradient(to top left, #FFFCF7,  #CED1D6);
+
+
+    -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+
+    &.dark {
+        background: linear-gradient( to bottom right,rgba(0, 0, 0, 0.6), #A9A9A9);
+    }
 
     .lg-heading, .text-secondary {
         display: block;
     }
     .text-secondary {
         font-size: 3rem;
+        margin-bottom: 5rem;
     }
 }
 
@@ -16,9 +30,12 @@
     margin: auto;
 
     background-color: #fff;
-    box-shadow: 0 2x 5px rgba(0, 0, 0, 0.3);
     width: 400px;
     max-width: 100%;
+
+    -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
 }
 
 .head {
