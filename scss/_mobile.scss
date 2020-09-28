@@ -82,8 +82,11 @@
     // main 
 
     main {
-        width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 20vh 0rem;
+        margin: 10rem 5rem 1rem 5rem;
 
         .sm-heading {
             margin-top: 3rem;
@@ -93,11 +96,12 @@
     // work
 
     .work {
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
-        padding: 0 12rem 100rem 12rem;
+        height: 100%;  
+        padding: 20vh 6rem 30vh;
+        margin: 5rem 5rem 1rem 5rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -124,11 +128,12 @@
     // about
 
     .about {
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
-        padding: 0 12rem 2rem 12rem;
+        height: 100%;  
+        padding: 20vh 6rem 30vh;
+        margin: 5rem 5rem 1rem 5rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -160,12 +165,12 @@
     // contact
 
     .contact{
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
-        padding: 0 12rem 2rem 12rem;
-        position: relative;
+        height: 100%;  
+        padding: 20vh 6rem 30vh;
+        margin: 5rem 5rem 1rem 5rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -200,7 +205,6 @@
 @include mediaMd {
     header {
 
-        width: 100%;
         padding:0;
 
         .logo {
@@ -221,13 +225,12 @@
     // main
 
     main {
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         background: none;
-        margin-top: 10rem;
-        padding: 0;
+        padding: 20vh 0rem;
+        margin: 5rem 2rem 1rem 2rem;
         
         .lg-heading {
             margin-top: 10rem;
@@ -252,12 +255,13 @@
     // work
 
     .work {
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         background: none;
-        padding: 0 8rem 120rem 8rem;
+        height: 100%;  
+        padding: 20vh 2rem 30vh;
+        margin: 5rem 2rem 1rem 2rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -285,12 +289,13 @@
     }
 
     .about {
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         background: none;
-        padding: 0 2rem 2rem 2rem;
+        height: 100%;  
+        padding: 20vh 2rem 30vh;
+        margin: 5rem 2rem 1rem 2rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -320,12 +325,13 @@
     }
 
     .contact{
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         background: none;
-        padding: 0 2rem 2rem 2rem;
+        height: 100%;  
+        padding: 20vh 2rem 30vh;
+        margin: 5rem 2rem 1rem 2rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -350,7 +356,6 @@
 
 @include mediaSm {
     header {
-        width: 100%;
         padding:0;
 
         .logo {
@@ -359,7 +364,6 @@
 
         ul {
             flex-wrap: wrap;
-            width: 100%;
             padding: 0;
         }
 
@@ -371,13 +375,12 @@
     // main
 
     main {
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         background: none;
-        margin-top: 10rem;
-        padding: 0;
+        padding: 20vh 0rem;
+        margin: 5rem 2rem 1rem 2rem;
 
         &.dark {
             background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1) );
@@ -406,12 +409,13 @@
     // work
 
     .work {
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         background: none;
-        padding: 0 2rem 115rem 2rem;
+        height: 100%;  
+        padding: 20vh 0rem 30vh;
+        margin: 5rem 2rem 1rem 2rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -439,12 +443,13 @@
     }
 
     .about {
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         background: none;
-        padding: 0 2rem 2rem 2rem;
+        height: 100%;  
+        padding: 20vh 0rem 10vh;
+        margin: 5rem 2rem 1rem 2rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -474,12 +479,13 @@
     }
 
     .contact{
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
         background: none;
-        padding: 0 2rem 2rem 2rem;
+        height: 100%;  
+        padding: 20vh 0rem 10vh;
+        margin: 5rem 2rem 1rem 2rem;
 
         .lg-heading {
             font-size: 3rem;
