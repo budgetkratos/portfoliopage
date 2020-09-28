@@ -6,6 +6,13 @@ document.addEventListener('scroll', function () {
     header.classList.toggle('sticky', window.scrollY > 0);
 })
 
+var onresize = function () {
+    var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+    console.log(width);
+}
+
 // FORM 
 
 // GET classes & IDs

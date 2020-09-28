@@ -291,13 +291,13 @@ main {
   margin: 8rem 10rem 2rem 10rem;
   overflow: hidden;
   height: 100vh;
-  background: url("/img/bg-image.jpg");
+  background: url("https://budgetkratos.github.io/portfoliopage/img/bg-image.jpg");
   background-size: cover;
   box-shadow: 1px 2px 16px 6px rgba(0, 0, 0, 0.75);
 }
 
 main.dark {
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("/img/bg-image.jpg");
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("https://budgetkratos.github.io/portfoliopage/img/bg-image.jpg");
   background-size: cover;
 }
 
@@ -326,13 +326,13 @@ main header {
   margin: 4rem 10rem 2rem 10rem;
   overflow: hidden;
   height: 100vh;
-  background: url("/img/bg-image-2.jpg");
+  background: url("https://budgetkratos.github.io/portfoliopage/img/bg-image-2.jpg");
   background-size: cover;
   box-shadow: 1px 2px 16px 6px rgba(0, 0, 0, 0.75);
 }
 
 .work.dark {
-  background: linear-gradient(to top right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("/img/bg-image-2.jpg");
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("https://budgetkratos.github.io/portfoliopage/img/bg-image-2.jpg");
 }
 
 .work .text-secondary {
@@ -459,7 +459,7 @@ main header {
 }
 
 .about.dark {
-  background: linear-gradient(to top right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url("/img/bg-image-3.jpg");
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url("https://budgetkratos.github.io/portfoliopage/img/bg-image-3.jpg");
   background-size: cover;
 }
 
@@ -545,6 +545,18 @@ footer .icons a:hover, footer a:hover {
   header ul a {
     font-size: 1.5rem;
   }
+  main .sm-heading {
+    top: 68%;
+  }
+  .work {
+    padding-bottom: 85rem;
+  }
+  .lg-heading {
+    font-size: 6rem;
+  }
+  .sm-heading {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 1171px) and (max-width: 1799px) {
@@ -553,6 +565,12 @@ footer .icons a:hover, footer a:hover {
   }
   header ul a {
     font-size: 1rem;
+  }
+  main .sm-heading {
+    top: 62%;
+  }
+  .work {
+    padding-bottom: 85rem;
   }
 }
 
@@ -576,8 +594,15 @@ footer .icons a:hover, footer a:hover {
     width: 100%;
     text-align: center;
   }
-  main .star-wrapper {
-    display: none;
+  main .sm-heading {
+    margin-top: 3rem;
+  }
+  .work {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12rem 100rem 12rem;
   }
   .work .lg-heading {
     font-size: 3rem;
@@ -592,6 +617,13 @@ footer .icons a:hover, footer a:hover {
     grid-template-columns: 1fr;
     grid-template-areas: 'project-1' 'project-2' 'project-3';
     grid-gap: 10rem;
+  }
+  .about {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12rem 2rem 12rem;
   }
   .about .lg-heading {
     font-size: 3rem;
@@ -609,6 +641,14 @@ footer .icons a:hover, footer a:hover {
   .about .bio {
     font-size: 1.5rem;
   }
+  .contact {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12rem 2rem 12rem;
+    position: relative;
+  }
   .contact .lg-heading {
     font-size: 3rem;
   }
@@ -618,6 +658,15 @@ footer .icons a:hover, footer a:hover {
   .contact .text-secondary {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+  }
+  footer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12rem 2rem 12rem;
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -640,18 +689,38 @@ footer .icons a:hover, footer a:hover {
   main {
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    margin-top: 10rem;
+    padding: 0;
   }
   main .lg-heading {
+    margin-top: 10rem;
     font-size: 3rem;
   }
   main .text-highlight {
     font-size: 3rem;
   }
-  main .star-wrapper {
-    display: none;
+  main .sm-heading {
+    position: initial;
+    margin-top: 2rem;
+  }
+  main .icons {
+    margin: 2rem 0;
+  }
+  .work {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    padding: 0 8rem 120rem 8rem;
   }
   .work .lg-heading {
     font-size: 3rem;
+    padding: 0;
+    margin: 0;
   }
   .work .text-highlight {
     font-size: 3rem;
@@ -662,7 +731,15 @@ footer .icons a:hover, footer a:hover {
   .work .wrapper-work {
     grid-template-columns: 1fr;
     grid-template-areas: 'project-1' 'project-2' 'project-3';
-    grid-gap: 10rem;
+    grid-gap: 15rem;
+  }
+  .about {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    padding: 0 2rem 2rem 2rem;
   }
   .about .lg-heading {
     font-size: 3rem;
@@ -680,6 +757,14 @@ footer .icons a:hover, footer a:hover {
   .about .bio {
     font-size: 1.5rem;
   }
+  .contact {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    padding: 0 2rem 2rem 2rem;
+  }
   .contact .lg-heading {
     font-size: 3rem;
   }
@@ -689,6 +774,9 @@ footer .icons a:hover, footer a:hover {
   .contact .text-secondary {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+  }
+  footer {
+    display: none;
   }
 }
 
@@ -711,18 +799,41 @@ footer .icons a:hover, footer a:hover {
   main {
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    margin-top: 10rem;
+    padding: 0;
+  }
+  main.dark {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
   }
   main .lg-heading {
+    margin-top: 10rem;
     font-size: 3rem;
   }
   main .text-highlight {
     font-size: 3rem;
   }
-  main .star-wrapper {
-    display: none;
+  main .sm-heading {
+    position: initial;
+    margin-top: 2rem;
+  }
+  main .icons {
+    margin: 2rem 0;
+  }
+  .work {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    padding: 0 2rem 115rem 2rem;
   }
   .work .lg-heading {
     font-size: 3rem;
+    padding: 0;
+    margin: 0;
   }
   .work .text-highlight {
     font-size: 3rem;
@@ -733,7 +844,15 @@ footer .icons a:hover, footer a:hover {
   .work .wrapper-work {
     grid-template-columns: 1fr;
     grid-template-areas: 'project-1' 'project-2' 'project-3';
-    grid-gap: 10rem;
+    grid-gap: 15rem;
+  }
+  .about {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    padding: 0 2rem 2rem 2rem;
   }
   .about .lg-heading {
     font-size: 3rem;
@@ -751,6 +870,14 @@ footer .icons a:hover, footer a:hover {
   .about .bio {
     font-size: 1.5rem;
   }
+  .contact {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    padding: 0 2rem 2rem 2rem;
+  }
   .contact .lg-heading {
     font-size: 3rem;
   }
@@ -760,6 +887,9 @@ footer .icons a:hover, footer a:hover {
   .contact .text-secondary {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+  }
+  footer {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

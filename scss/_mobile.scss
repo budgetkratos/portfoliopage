@@ -11,6 +11,26 @@
             font-size: 1.5rem;
         }
     }
+
+    main {
+        .sm-heading {
+            top: 68%;
+        }
+    }
+
+    .work {
+        padding-bottom: 85rem;
+    }
+
+    .lg-heading {
+        font-size: 6rem;
+    }
+
+    .sm-heading{
+        font-size: 3rem;
+    }
+
+    
 }
 
 @include mediaXLg {
@@ -23,6 +43,17 @@
             font-size: 1rem;
         }
     }
+
+    main {
+
+        .sm-heading {
+            top: 62%;
+        }
+    }
+
+    .work {
+        padding-bottom: 85rem;
+    }
 }
 
 
@@ -30,7 +61,6 @@
 
 @include mediaLg {
     header {
-
         width: 100%;
         
         .logo {
@@ -55,14 +85,19 @@
         width: 100%;
         text-align: center;
 
-        .star-wrapper {
-            display: none;
+        .sm-heading {
+            margin-top: 3rem;
         }
     }
 
     // work
 
     .work {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12rem 100rem 12rem;
 
         .lg-heading {
             font-size: 3rem;
@@ -89,6 +124,12 @@
     // about
 
     .about {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12rem 2rem 12rem;
+
         .lg-heading {
             font-size: 3rem;
         }
@@ -119,6 +160,13 @@
     // contact
 
     .contact{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12rem 2rem 12rem;
+        position: relative;
+
         .lg-heading {
             font-size: 3rem;
         }
@@ -131,6 +179,16 @@
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12rem 2rem 12rem;
+        position: absolute;
+        right: 0;
     }
 
 
@@ -165,9 +223,14 @@
     main {
         width: 100%;
         text-align: center;
-
+        display: flex;
+        flex-direction: column;
+        background: none;
+        margin-top: 10rem;
+        padding: 0;
         
         .lg-heading {
+            margin-top: 10rem;
             font-size: 3rem;
         }
 
@@ -175,8 +238,13 @@
             font-size: 3rem;
         }
 
-        .star-wrapper {
-            display: none;
+        .sm-heading {
+            position: initial;
+            margin-top: 2rem;
+        }
+
+        .icons {
+            margin: 2rem 0;
         }
 
     }
@@ -184,9 +252,17 @@
     // work
 
     .work {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        padding: 0 8rem 120rem 8rem;
 
         .lg-heading {
             font-size: 3rem;
+            padding: 0;
+            margin: 0;
         }
 
         .text-highlight {
@@ -203,11 +279,19 @@
             'project-1'
             'project-2'
             'project-3';
-            grid-gap: 10rem;
+            grid-gap: 15rem;
+
         }
     }
 
     .about {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        padding: 0 2rem 2rem 2rem;
+
         .lg-heading {
             font-size: 3rem;
         }
@@ -236,6 +320,13 @@
     }
 
     .contact{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        padding: 0 2rem 2rem 2rem;
+
         .lg-heading {
             font-size: 3rem;
         }
@@ -249,13 +340,16 @@
             margin-bottom: 2rem;
         }
     }
+
+    footer {
+        display: none;
+    }
 }
 
 // phones
 
 @include mediaSm {
     header {
-
         width: 100%;
         padding:0;
 
@@ -279,9 +373,18 @@
     main {
         width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        margin-top: 10rem;
+        padding: 0;
 
+        &.dark {
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1) );
+        }
         
         .lg-heading {
+            margin-top: 10rem;
             font-size: 3rem;
         }
 
@@ -289,8 +392,13 @@
             font-size: 3rem;
         }
 
-        .star-wrapper {
-            display: none;
+        .sm-heading {
+            position: initial;
+            margin-top: 2rem;
+        }
+
+        .icons {
+            margin: 2rem 0;
         }
 
     }
@@ -298,9 +406,17 @@
     // work
 
     .work {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        padding: 0 2rem 115rem 2rem;
 
         .lg-heading {
             font-size: 3rem;
+            padding: 0;
+            margin: 0;
         }
 
         .text-highlight {
@@ -317,11 +433,19 @@
             'project-1'
             'project-2'
             'project-3';
-            grid-gap: 10rem;
+            grid-gap: 15rem;
+
         }
     }
 
     .about {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        padding: 0 2rem 2rem 2rem;
+
         .lg-heading {
             font-size: 3rem;
         }
@@ -350,6 +474,13 @@
     }
 
     .contact{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        padding: 0 2rem 2rem 2rem;
+
         .lg-heading {
             font-size: 3rem;
         }
@@ -362,5 +493,9 @@
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
+    }
+
+    footer {
+        display: none;
     }
 }

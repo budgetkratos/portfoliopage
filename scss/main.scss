@@ -110,7 +110,7 @@ main {
     margin: 8rem 10rem 2rem 10rem;
     overflow: hidden;
     height: 100vh;
-    background: url('/img/bg-image.jpg');
+    background: url('https://budgetkratos.github.io/portfoliopage/img/bg-image.jpg');
     background-size: cover;
 
     -webkit-box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
@@ -118,7 +118,7 @@ main {
     box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
     
     &.dark {
-        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('/img/bg-image.jpg');
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('https://budgetkratos.github.io/portfoliopage/img/bg-image.jpg');
         background-size: cover;
     }
 
@@ -154,7 +154,7 @@ main {
     margin: 4rem 10rem 2rem 10rem;
     overflow: hidden;
     height: 100vh;
-    background: url('/img/bg-image-2.jpg');
+    background: url('https://budgetkratos.github.io/portfoliopage/img/bg-image-2.jpg');
     background-size: cover;
 
 
@@ -163,7 +163,7 @@ main {
     box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
 
     &.dark {
-        background: linear-gradient( to top right,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('/img/bg-image-2.jpg');
+        background: linear-gradient( to top right,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6) ), url('https://budgetkratos.github.io/portfoliopage/img/bg-image-2.jpg');
     }
 
     .text-secondary {
@@ -327,7 +327,7 @@ main {
     box-shadow: 1px 2px 16px 6px rgba(0,0,0,0.75);
 
     &.dark {
-        background: linear-gradient( to top right,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) ), url('/img/bg-image-3.jpg');
+        background: linear-gradient( to top right,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7) ), url('https://budgetkratos.github.io/portfoliopage/img/bg-image-3.jpg');
         background-size: cover;
     }
 
@@ -410,7 +410,6 @@ footer {
     flex-direction: column;
     margin-top: 2rem;
 
-    
 
     font-size: 1.5rem;
 
